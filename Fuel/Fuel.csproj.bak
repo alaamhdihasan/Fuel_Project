@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16150F72-959D-41A8-A1C7-7A13D9A3A3FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fuel</RootNamespace>
+    <AssemblyName>Fuel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gas_fuel_pointer_arrow_right_icon_124652.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Wizard, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Scanner\Scanner\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TwainLib, Version=3.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Scanner\Scanner\bin\Debug\TwainLib.dll</HintPath>
+    </Reference>
+    <Reference Include="TwainScanning, Version=1.1.0.11, Culture=neutral, PublicKeyToken=69c27c0ddf03a463, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Scanner\Scanner\bin\Debug\TwainScanning.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLS_FRMS\CLS_Car.cs" />
+    <Compile Include="CLS_FRMS\CLS_Department.cs" />
+    <Compile Include="CLS_FRMS\CLS_FuelEntry.cs" />
+    <Compile Include="CLS_FRMS\CLS_FuelExit.cs" />
+    <Compile Include="CLS_FRMS\CLS_FuelExitPlace.cs" />
+    <Compile Include="CLS_FRMS\CLS_RPFuel.cs" />
+    <Compile Include="CLS_FRMS\CLS_Store.cs" />
+    <Compile Include="CLS_FRMS\CLS_Users.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="DS\DSFuel.cs">
+      <DependentUpon>DSFuel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DSFuel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSFuel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMBACKUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMBACKUP.Designer.cs">
+      <DependentUpon>FRMBACKUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMCONTANT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMCONTANT.Designer.cs">
+      <DependentUpon>FRMCONTANT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMControl.Designer.cs">
+      <DependentUpon>FRMControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELENTRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELENTRY.Designer.cs">
+      <DependentUpon>FRMFUELENTRY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELEXIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELEXIT.Designer.cs">
+      <DependentUpon>FRMFUELEXIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELEXITPLACE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMFUELEXITPLACE.Designer.cs">
+      <DependentUpon>FRMFUELEXITPLACE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMLOGIN.Designer.cs">
+      <DependentUpon>FRMLOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMMAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMMAIN.Designer.cs">
+      <DependentUpon>FRMMAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMNOTFCATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMNOTFCATION.Designer.cs">
+      <DependentUpon>FRMNOTFCATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMRPCAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMRPCAR.Designer.cs">
+      <DependentUpon>FRMRPCAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMRPFUEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMRPFUEL.Designer.cs">
+      <DependentUpon>FRMRPFUEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FRMUSERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FRMUSERS.Designer.cs">
+      <DependentUpon>FRMUSERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\FUELPRICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\FUELPRICE.Designer.cs">
+      <DependentUpon>FUELPRICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\Keyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\Keyboard.Designer.cs">
+      <DependentUpon>Keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMS\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMS\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTS\BillExitBetweentowdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitBetweentowdate.Designer.cs">
+      <DependentUpon>BillExitBetweentowdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitCarBetweentowdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitCarBetweentowdate.Designer.cs">
+      <DependentUpon>BillExitCarBetweentowdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitCarsSummaryBetweentowdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitCarsSummaryBetweentowdate.Designer.cs">
+      <DependentUpon>BillExitCarsSummaryBetweentowdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitDeptBetweentowdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitDeptBetweentowdate.Designer.cs">
+      <DependentUpon>BillExitDeptBetweentowdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitDeptsSummaryBetweentowdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitDeptsSummaryBetweentowdate.Designer.cs">
+      <DependentUpon>BillExitDeptsSummaryBetweentowdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceBetweeTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceBetweeTowDate.Designer.cs">
+      <DependentUpon>BillExitPlaceBetweeTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceDeptBetweenTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceDeptBetweenTowDate.Designer.cs">
+      <DependentUpon>BillExitPlaceDeptBetweenTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceDeptsSummaryBetweenTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceDeptsSummaryBetweenTowDate.Designer.cs">
+      <DependentUpon>BillExitPlaceDeptsSummaryBetweenTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlacePlaceBetweenTowDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlacePlaceBetweenTowDate.Designer.cs">
+      <DependentUpon>BillExitPlacePlaceBetweenTowDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceSummryBetweenTwoDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillExitPlaceSummryBetweenTwoDate.Designer.cs">
+      <DependentUpon>BillExitPlaceSummryBetweenTwoDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillsBetweenTwoDateEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillsBetweenTwoDateEntry.Designer.cs">
+      <DependentUpon>BillsBetweenTwoDateEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillsEntryByMonth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillsEntryByMonth.Designer.cs">
+      <DependentUpon>BillsEntryByMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\BillsExitPlaceByMonth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\BillsExitPlaceByMonth.Designer.cs">
+      <DependentUpon>BillsExitPlaceByMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarByDept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarByDept.Designer.cs">
+      <DependentUpon>CarByDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarByDivision.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarByDivision.Designer.cs">
+      <DependentUpon>CarByDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\carByFuel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\carByFuel.Designer.cs">
+      <DependentUpon>carByFuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByType.Designer.cs">
+      <DependentUpon>CarsByType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTypeAndDept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\CarsByTypeAndDept.Designer.cs">
+      <DependentUpon>CarsByTypeAndDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\FuelExitBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\FuelExitBill.Designer.cs">
+      <DependentUpon>FuelExitBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\FuelExitPlaceBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\FuelExitPlaceBill.Designer.cs">
+      <DependentUpon>FuelExitPlaceBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTS\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummryByDept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummryByDept.Designer.cs">
+      <DependentUpon>SummryByDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\SummryCarType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\SummryCarType.Designer.cs">
+      <DependentUpon>SummryCarType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER_CONTROL\NumberClick.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER_CONTROL\NumberClick.Designer.cs">
+      <DependentUpon>NumberClick.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FRMS\FRMBACKUP.resx">
+      <DependentUpon>FRMBACKUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMCONTANT.resx">
+      <DependentUpon>FRMCONTANT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMControl.resx">
+      <DependentUpon>FRMControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMFUELENTRY.resx">
+      <DependentUpon>FRMFUELENTRY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMFUELEXIT.resx">
+      <DependentUpon>FRMFUELEXIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMFUELEXITPLACE.resx">
+      <DependentUpon>FRMFUELEXITPLACE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMLOGIN.resx">
+      <DependentUpon>FRMLOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMMAIN.resx">
+      <DependentUpon>FRMMAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMNOTFCATION.resx">
+      <DependentUpon>FRMNOTFCATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMRPCAR.resx">
+      <DependentUpon>FRMRPCAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMRPFUEL.resx">
+      <DependentUpon>FRMRPFUEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FRMUSERS.resx">
+      <DependentUpon>FRMUSERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\FUELPRICE.resx">
+      <DependentUpon>FUELPRICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\Keyboard.resx">
+      <DependentUpon>Keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMS\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTS\BillExitBetweentowdate.resx">
+      <DependentUpon>BillExitBetweentowdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitCarBetweentowdate.resx">
+      <DependentUpon>BillExitCarBetweentowdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitCarsSummaryBetweentowdate.resx">
+      <DependentUpon>BillExitCarsSummaryBetweentowdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitDeptBetweentowdate.resx">
+      <DependentUpon>BillExitDeptBetweentowdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitDeptsSummaryBetweentowdate.resx">
+      <DependentUpon>BillExitDeptsSummaryBetweentowdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitPlaceBetweeTowDate.resx">
+      <DependentUpon>BillExitPlaceBetweeTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitPlaceDeptBetweenTowDate.resx">
+      <DependentUpon>BillExitPlaceDeptBetweenTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitPlaceDeptsSummaryBetweenTowDate.resx">
+      <DependentUpon>BillExitPlaceDeptsSummaryBetweenTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitPlacePlaceBetweenTowDate.resx">
+      <DependentUpon>BillExitPlacePlaceBetweenTowDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillExitPlaceSummryBetweenTwoDate.resx">
+      <DependentUpon>BillExitPlaceSummryBetweenTwoDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillsBetweenTwoDateEntry.resx">
+      <DependentUpon>BillsBetweenTwoDateEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillsEntryByMonth.resx">
+      <DependentUpon>BillsEntryByMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\BillsExitPlaceByMonth.resx">
+      <DependentUpon>BillsExitPlaceByMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarByDept.resx">
+      <DependentUpon>CarByDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarByDivision.resx">
+      <DependentUpon>CarByDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\carByFuel.resx">
+      <DependentUpon>carByFuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByType.resx">
+      <DependentUpon>CarsByType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\CarsByTypeAndDept.resx">
+      <DependentUpon>CarsByTypeAndDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\FuelExitBill.resx">
+      <DependentUpon>FuelExitBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\FuelExitPlaceBill.resx">
+      <DependentUpon>FuelExitPlaceBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummryByDept.resx">
+      <DependentUpon>SummryByDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\SummryCarType.resx">
+      <DependentUpon>SummryCarType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_CONTROL\NumberClick.resx">
+      <DependentUpon>NumberClick.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DS\DSFuel.xsc">
+      <DependentUpon>DSFuel.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DSFuel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSFuel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\DSFuel.xss">
+      <DependentUpon>DSFuel.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reminder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الاليات.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الاليات1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42568-fuel-pump-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select All_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interstate Truck_75px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gas Station_75px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moniter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moniter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel2_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Appointment Reminders_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moniter11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Backup_75px21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_75px21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Basilica_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cathedral_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interstate Truck_75px11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Traffic Jam_75px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book Shelf_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Credentials_75px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System Task_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scanner_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_sign_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar Chart_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powerpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cathedral_75px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gas-pump_icon-icons.com_70725.ico" />
+    <Content Include="gas_fuel_pointer_arrow_right_icon_124652.ico" />
+    <None Include="Resources\ref.png" />
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
